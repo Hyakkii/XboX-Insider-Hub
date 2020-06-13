@@ -2,7 +2,6 @@
 for /f "tokens=6 delims=[]. " %%G in ('ver') do if %%G lss 16299 goto :version
 %windir%\system32\reg.exe query "HKU\S-1-5-19" 1>nul 2>nul || goto :uac
 setlocal enableextensions
-if /i "%PROCESSOR_ARCHITECTURE%" equ "AMD64" (set "arch=x64") else (set "arch=x86")
 cd /d "%~dp0"
 
 if not exist "*FlightDashboard*.appx" goto :nofiles
