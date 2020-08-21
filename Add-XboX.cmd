@@ -8,15 +8,6 @@ cd /d "%~dp0"
 if not exist "*FlightDashboard*.appx" goto :nofiles
 if not exist "*FlightDashboard*.cer" goto :nofiles
 
-if not exist "Arm\*NET.Native.Framework*2.1*.appx" goto :nofiles
-if not exist "Arm\*NET.Native.Runtime*2.1*.appx" goto :nofiles
-
-if not exist "x64\*NET.Native.Framework*2.1*.appx" goto :nofiles
-if not exist "x64\*NET.Native.Runtime*2.1*.appx" goto :nofiles
-
-if not exist "x86\*NET.Native.Framework*2.1*.appx" goto :nofiles
-if not exist "x86\*NET.Native.Runtime*2.1*.appx" goto :nofiles
-
 set "PScommand=PowerShell -NoLogo -NoProfile -NonInteractive -InputFormat None -ExecutionPolicy Bypass"
 set "Add=Add-AppxPackage"
 
